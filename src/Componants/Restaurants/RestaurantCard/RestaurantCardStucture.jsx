@@ -15,9 +15,9 @@ const handleRestaurant=(name) => {
   
 }
   return (
-    <div onClick={()=>handleRestaurant(restaurant.name)} className="max-w-[400px]   ">
-      <div className="">
-        <img className="rounded-3xl " src="/pizza.jpg" alt="" />
+    <div onClick={()=>handleRestaurant(restaurant.name)} className="   ">
+      <div className=" h-fit   ">
+        <img className="rounded-3xl bg-cover h-[150px] w-full " src={restaurant.image} alt="" />
       </div>
       <div className="px-3 mt-2 ">
         <div className="flex  justify-between">

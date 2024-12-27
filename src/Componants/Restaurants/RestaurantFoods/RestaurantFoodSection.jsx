@@ -1,9 +1,14 @@
 import React from 'react'
+import FoodsMenu from './FoodsMenu'
 
-const RestaurantFoodSection = ({text}) => {
+const RestaurantFoodSection = ({name}) => {
+
+
+
   return (
-    <div>
-      
+    <div className=' mx-auto'>
+        <FoodsMenu/>
+      {/* {name} */}
     </div>
   )
 }

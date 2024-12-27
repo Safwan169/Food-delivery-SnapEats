@@ -4,7 +4,7 @@ import { ImVk } from "react-icons/im";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white  border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
         <div className="py-8 md:flex md:items-center md:justify-between">

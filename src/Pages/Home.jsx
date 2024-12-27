@@ -4,8 +4,8 @@ import RestaurantCardMain from "../Componants/Restaurants/RestaurantCard/Restaur
 
 const Home = () => {
   return (
-    <div >
-      <div className="pt-40  max-w-[1400px] mx-auto">
+    <div className="" >
+      <div className="  max-w-[1400px] mx-auto">
         <RestaurantsBtn />
       <RestaurantCardMain />
       </div>
