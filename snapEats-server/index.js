@@ -3,8 +3,7 @@ const app = express()
 const port = process.env.PORT || 5000
 
 // const cors = require('cors')
-require('dotenv')
-
+require('dotenv').config()
 
 
 
@@ -23,13 +22,23 @@ const client = new MongoClient(uri, {
 });
 
 async function run() {
+   const database= await client.db("SnapEats")
+   const restaurantDataEng= await database.collection('restaurantDataEng')
   try {
     // Connect the client to the server	(optional starting in v4.7)
     // await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin")
 
-    
+    app.get('/restaurant/all',async(req,res) => {
+
+        const result= await restaurantDataEng.find().toArray()
+
+        console.log(result,'this is a successful')
+        res.json(result)
+        
+    })
+
+
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error

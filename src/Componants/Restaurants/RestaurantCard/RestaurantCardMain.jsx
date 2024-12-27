@@ -173,7 +173,7 @@ const RestaurantCardMain = () => {
       {
         "id": 4,
         "name": "Taco Fiesta",
-        "image": "https://i.ibb.co.com/5R2XkVR/tacos.jpg",
+        "image": "https://i.ibb.co.com/zNcRx8x/download.jpghttps://i.ibb.co.com/ZVv0fFV/download.jpg",
         "rating": 4.6,
         "deliveryTime": "20-30 mins",
         "type": "Mexican Restaurant",
@@ -187,7 +187,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 701,
                 "name": "Chicken Tacos",
-                "image": "https://i.ibb.co.com/CP1W3rg/chicken-tacos.jpg",
+                "image": "https://i.ibb.co.com/42fXb4v/Shredded-Chicken-Tacos-Little-Chef-Within.jpg",
                 "price": 349, // in BDT
                 "weight": "250g",
                 "description": "Soft tortillas filled with seasoned chicken, lettuce, and salsa."
@@ -195,7 +195,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 702,
                 "name": "Beef Tacos",
-                "image": "https://i.ibb.co.com/LvQgPjd/beef-tacos.jpg",
+                "image": "https://i.ibb.co.com/7tq0SN7/download.jpg",
                 "price": 399, // in BDT
                 "weight": "270g",
                 "description": "Juicy beef with spicy seasoning, fresh veggies, and cheese."
@@ -208,7 +208,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 703,
                 "name": "Nachos",
-                "image": "https://i.ibb.co.com/RJyxzhD/nachos.jpg",
+                "image": "https://i.ibb.co.com/4TrF46b/download.jpg",
                 "price": 299, // in BDT
                 "weight": "200g",
                 "description": "Crunchy tortilla chips topped with melted cheese and jalapeños."
@@ -216,7 +216,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 704,
                 "name": "Guacamole",
-                "image": "https://i.ibb.co.com/8g6ZJMz/guacamole.jpg",
+                "image": "https://i.ibb.co.com/19c79vX/download.jpg",
                 "price": 199, // in BDT
                 "weight": "100g",
                 "description": "Freshly made avocado dip with a hint of lime."
@@ -228,7 +228,7 @@ const RestaurantCardMain = () => {
       {
         "id": 5,
         "name": "Pasta Palace",
-        "image": "https://i.ibb.co.com/yFkH9Hr/pasta.jpg",
+        "image": "https://i.ibb.co.com/RvZXMJZ/258381-leones.webp",
         "rating": 4.9,
         "deliveryTime": "30-40 mins",
         "type": "Italian Restaurant",
@@ -242,7 +242,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 801,
                 "name": "Spaghetti Carbonara",
-                "image": "https://i.ibb.co.com/dx9kZbw/spaghetti-carbonara.jpg",
+                "image": "https://i.ibb.co.com/GTvFY53/download.jpg",
                 "price": 999, // in BDT
                 "weight": "300g",
                 "description": "Creamy pasta with crispy bacon and parmesan."
@@ -250,7 +250,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 802,
                 "name": "Penne Arrabbiata",
-                "image": "https://i.ibb.co.com/hF0TVqL/penne-arrabbiata.jpg",
+                "image": "https://i.ibb.co.com/SvGJvDg/download.jpg",
                 "price": 899, // in BDT
                 "weight": "350g",
                 "description": "Spicy tomato-based pasta with garlic and chili flakes."
@@ -263,7 +263,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 803,
                 "name": "Tiramisu",
-                "image": "https://i.ibb.co.com/68X6Lmx/tiramisu.jpg",
+                "image": "https://i.ibb.co.com/v4wPqCH/download.jpg",
                 "price": 499, // in BDT
                 "weight": "150g",
                 "description": "Classic Italian coffee-flavored dessert with mascarpone cheese."
@@ -271,7 +271,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 804,
                 "name": "Panna Cotta",
-                "image": "https://i.ibb.co.com/CyPvmsj/panna-cotta.jpg",
+                "image": "https://i.ibb.co.com/JkjrgLF/download.jpg",
                 "price": 449, // in BDT
                 "weight": "200g",
                 "description": "Silky smooth cream dessert with a berry topping."
@@ -283,7 +283,7 @@ const RestaurantCardMain = () => {
       {
         "id": 6,
         "name": "Kebab Kingdom",
-        "image": "https://i.ibb.co.com/W3RfTCT/kebab.jpg",
+        "image": "https://i.ibb.co.com/rQLcrM9/download.jpg",
         "rating": 4.4,
         "deliveryTime": "35-45 mins",
         "type": "Middle Eastern Restaurant",
@@ -297,7 +297,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 901,
                 "name": "Chicken Seekh Kebab",
-                "image": "https://i.ibb.co.com/0Hkm9WD/chicken-seekh-kebab.jpg",
+                "image": "https://i.ibb.co.com/svTpmGM/download.jpg",
                 "price": 549, // in BDT
                 "weight": "250g",
                 "description": "Juicy chicken kebabs grilled to perfection with spices."
@@ -305,7 +305,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 902,
                 "name": "Lamb Kebab",
-                "image": "https://i.ibb.co.com/5L9kzDd/lamb-kebab.jpg",
+                "image": "https://i.ibb.co.com/g7fkTTC/download.jpg",
                 "price": 649, // in BDT
                 "weight": "300g",
                 "description": "Tender lamb kebabs served with mint chutney."
@@ -318,7 +318,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 903,
                 "name": "Pita Bread",
-                "image": "https://i.ibb.co.com/YQj5swd/pita-bread.jpg",
+                "image": "https://i.ibb.co.com/vqXpZbQ/download.jpg",
                 "price": 149, // in BDT
                 "weight": "150g",
                 "description": "Soft and fluffy pita bread perfect for dipping."
@@ -326,7 +326,7 @@ const RestaurantCardMain = () => {
               {
                 "id": 904,
                 "name": "Garlic Naan",
-                "image": "https://i.ibb.co.com/jH0wVq8/garlic-naan.jpg",
+                "image": "https://i.ibb.co.com/0F0Z5NP/download.jpg",
                 "price": 199, // in BDT
                 "weight": "200g",
                 "description": "Buttery naan bread with a hint of garlic."
