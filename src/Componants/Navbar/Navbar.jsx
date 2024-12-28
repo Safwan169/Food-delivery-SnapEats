@@ -16,9 +16,9 @@ const Navbar = () => {
 
   const {user,cart}=useContext(my_context)
 
-  console.log(cart.items)
+  // console.log(cart.items)
 
-  const price=cart.items.reduce((acc, current)=>acc+current.price,0)
+  const price=cart?.items?.reduce((acc, current)=>acc+current?.price,0)
   console.log(price)
 
   console.log(user)
