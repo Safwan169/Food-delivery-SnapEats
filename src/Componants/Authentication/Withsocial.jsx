@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { GithubAuthProvider } from "firebase/auth";
+
 
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth/web-extension';
+import { getAuth, signInWithPopup } from 'firebase/auth';
 // import { auth } from '../../firebase.config';
 
 

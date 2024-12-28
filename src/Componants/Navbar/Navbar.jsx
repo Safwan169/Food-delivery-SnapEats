@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router";
 import Logo from "./Shared/Logo";
 import SearchBar from "./Shared/SearchBar";
@@ -7,9 +7,14 @@ import Notification from "./Shared/Notification";
 import Language from "./Shared/Language";
 import Cart from "./Shared/Cart";
 import UserProfile from "./Shared/UserProfile";
+import { my_context } from "../../ContextProvider";
 
 const Navbar = () => {
-  const user = false;
+  const userr = false;
+
+  const {user}=useContext(my_context)
+
+  console.log(user)
 
   return (
     <nav className="px-7 bg-[#f5f4f2] z-50 fixed w-full">
@@ -27,12 +32,12 @@ const Navbar = () => {
           )}
           {/* <Language /> */}
           <Cart />
-          {user && (
+          {user?.email&& (
             <span>
-              <UserProfile />
+             <img src={user?.photoURL} alt="dfasd" />
             </span>
           )}
-          {!user && <NavLink to={'/login'} className="px-5 py-3 cursor-pointer font-semibold bg-gray-200 rounded-2xl">Log in</NavLink>}
+          {!user?.email && <NavLink to={'/login'} className="px-5 py-3 cursor-pointer font-semibold bg-gray-200 rounded-2xl">Log in</NavLink>}
         </div>
       </div>
     </nav>

@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000
 const cors = require('cors')
 require('dotenv').config()
 
-app.use(cors(['http://localhost:5173','https://food-delivery-snap-eats.vercel.app']))
+app.use(cors(['http://localhost:5173','https://food-delivery-snap-eats-gs1a.vercel.app']))
 
 
 
