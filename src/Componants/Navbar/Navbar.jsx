@@ -12,7 +12,7 @@ const Navbar = () => {
   const user = false;
 
   return (
-    <nav className="px-7 bg-[$f5f4f2] fixed w-full">
+    <nav className="px-7 bg-[#f5f4f2] z-50 fixed w-full">
       <div className="flex justify-between items-center border-b  pb-2">
         <div className="flex gap-10 w-1/2 items-center">
           <Logo />

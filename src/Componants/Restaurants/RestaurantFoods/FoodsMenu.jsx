@@ -1,84 +1,55 @@
-import React from 'react'
-import { FaArrowLeft } from 'react-icons/fa'
-import { IoMdArrowBack } from 'react-icons/io'
-import { NavLink } from 'react-router'
+import React, { useContext } from "react";
+import { FaArrowLeft } from "react-icons/fa";
+import { IoMdArrowBack } from "react-icons/io";
+import { TbTruckDelivery } from "react-icons/tb";
+import { NavLink } from "react-router";
+import { my_context } from "../../../ContextProvider";
 
-const FoodsMenu = () => {
+const FoodsMenu = ({ data }) => {
 
-    const data=
-        {
-            id: 1,
-            name: "Pizza Paradise",
-            image: "https://example.com/images/pizza-paradise.jpg",
-            rating: 4.8,
-            deliveryTime: "30-40 mins",
-            type: "Pizza Shop",
-            address: "123 Pizza Lane, Food City",
-            isFreeDelivery:true,
-            foods: [
-              {
-                category: "Pizza",
-                items: [
-                  {
-                    id: 101,
-                    name: "Margherita Pizza",
-                    image: "https://example.com/images/margherita-pizza.jpg",
-                    price: 8.99,
-                    weight: "350g",
-                    description:
-                      "Classic Margherita pizza with fresh basil and mozzarella cheese.",
-                  },
-                  {
-                    id: 102,
-                    name: "Pepperoni Pizza",
-                    image: "https://example.com/images/pepperoni-pizza.jpg",
-                    price: 9.99,
-                    weight: "400g",
-                    description: "Loaded with spicy pepperoni and melted cheese.",
-                  },
-                ],
-              },
-              {
-                category: "Soft Drinks",
-                items: [
-                  {
-                    id: 201,
-                    name: "Coke",
-                    image: "https://example.com/images/coke.jpg",
-                    price: 1.99,
-                    volume: "330ml",
-                    description: "Refreshing Coca-Cola to pair with your pizza.",
-                  },
-                  {
-                    id: 202,
-                    name: "Sprite",
-                    image: "https://example.com/images/sprite.jpg",
-                    price: 1.99,
-                    volume: "330ml",
-                    description: "Crisp and refreshing lemon-lime drink.",
-                  },
-                ],
-              },
-            ],
-          }
-    
+  const {setMenu,menu}=useContext(my_context)
+
+
+  const handleMenu=(index)=>{
+    setMenu(index)
+  }
+
 
   return (
-    <div>
-      <NavLink className={'flex items-center bg-white  px-5 py-3  rounded-2xl  gap-1'} to={'/'}><IoMdArrowBack size={20} />
-    
-      All restaurants</NavLink>
+    <div className="w-full sticky top-20 px-10 ">
+      <NavLink
+        className={"flex items-center mb-10 bg-white  px-5 py-3  rounded-2xl  gap-1"}
+        to={"/"}
+      >
+        <IoMdArrowBack size={20} />
+        All restaurants
+      </NavLink>
 
+      <div className="text-green-600 lg:hidden block">
+        {data?.isFreeDelivery && (
+          <p className="flex items-center gap-5">
+            {" "}
+            <span className="bg-gray-100 p-2">
+              <TbTruckDelivery className="  text-black" size={20} />
+            </span>
+            <span>
+              <p>Free delivery from 1000 TK</p>
+              <p>{data?.deliveryTime}</p>
+            </span>
+          </p>
+        )}
+      </div>
       <div>
-        <p className='text-xl font-semibold'>Menu</p>
-        <p className='mt-5 space-y-3'>{data.foods?.map((text,index)=>(<p>
+        <p className="text-xl font-semibold">Menu</p>
 
-            
-
-        </p>))}</p>
+        <p className="mt-5 space-y-3 flex-col flex cursor-pointer">
+          {data?.foods?.map((text, index) => (
+            <a onClick={()=>handleMenu(index)} href={`#${menu}`} className={`font-semibold ${index==menu?'bg-white p-3 rounded-2xl':'p-3'}`}>{text?.category}</a>
+          ))}
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FoodsMenu
+export default FoodsMenu;

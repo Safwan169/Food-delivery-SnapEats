@@ -5,9 +5,13 @@ const ContextProvider = ({children}) => {
 
     const [restaurantBtn,setRestaurantBtn] = useState('All')
 
+
+    const [menu,setMenu]=useState(0)
     const data={
         setRestaurantBtn,
         restaurantBtn,
+        setMenu,
+        menu
     }
   return (
     <my_context.Provider value={data}>
