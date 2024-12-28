@@ -34,7 +34,7 @@ const Navbar = () => {
           <Cart />
           {user?.email&& (
             <span>
-             <img src={user?.photoURL} alt="dfasd" />
+             <img className="w-10 rounded-2xl" src={user?.photoURL} alt="dfasd" />
             </span>
           )}
           {!user?.email && <NavLink to={'/login'} className="px-5 py-3 cursor-pointer font-semibold bg-gray-200 rounded-2xl">Log in</NavLink>}
