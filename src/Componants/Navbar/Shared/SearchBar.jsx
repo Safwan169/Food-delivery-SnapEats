@@ -1,16 +1,24 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
+import { useNavigate } from "react-router";
 
 const SearchBar = () => {
 
+  const navigate=useNavigate()
+
     const handleSearch = (e) => {
     e.preventDefault();
-    const searchQuery = e.target.elements.search.value;
+    const searchQuery = e.target.elements.search.value || 'all'
     console.log(`Searching for: ${searchQuery}`);
+
+    navigate(`/search/${searchQuery}`)
+
+  
   };
+
   return (
     <>
-      <form onSubmit={handleSearch} className="flex-grow  flex">
+      <form onSubmit={handleSearch} className="flex-grow max-w-[500px] flex">
         <div className="flex flex-grow  sm:p-0 relative">
           <input
             type="text"

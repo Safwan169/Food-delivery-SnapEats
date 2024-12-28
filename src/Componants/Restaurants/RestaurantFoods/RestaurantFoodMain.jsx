@@ -9,7 +9,7 @@ const RestaurantFoodMain = () => {
   return (
     <div className='bg-[#f5f4f2] mx-w-[1100px]'>
       
-      <RestaurantFoodSection name={restaurantName} />
+      <RestaurantFoodSection />
     </div>
   )
 }

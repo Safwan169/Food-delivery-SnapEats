@@ -347,7 +347,7 @@ const RestaurantCardMain = () => {
   const [restaurants,setRestaurantData]=useState([])
     useEffect(()=>{
   const data =async()=>{
-    const res= await axios.get(`http://localhost:5000/restaurant?value=${restaurantBtn}`)
+    const res= await axios.get(`https://food-delivery-snap-eats-szgc.vercel.app/restaurant?value=${restaurantBtn}`)
     setRestaurantData(res?.data)
     console.log(res.data,'thsi is from backend')
   }

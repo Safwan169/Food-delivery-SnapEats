@@ -9,6 +9,8 @@ const RestaurantsBtn = () => {
         {text:'Burger'},
         {text:'Sushi'},
         {text:'Pasta'},
+        {text:'Kebab'},
+        {text:'Taco '},
       
     ]
 

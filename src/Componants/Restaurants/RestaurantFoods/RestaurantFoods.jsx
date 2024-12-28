@@ -59,7 +59,7 @@ const RestaurantFoods = ({ data }) => {
 
               <p className="flex flex-wrap mt-5 gap-5">
                 {text?.items?.map((d) => (
-                  <FoodCard data={d} />
+                  <FoodCard data={d} restaurant={data?.name} />
                 ))}
               </p>
             </div>

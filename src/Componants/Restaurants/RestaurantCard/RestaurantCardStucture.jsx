@@ -19,10 +19,14 @@ const RestaurantCardStucture = ({ restaurant }) => {
 
     if (available) {
       localStorage.removeItem("restaurantFood");
-    }
-
     localStorage.setItem("restaurantFood", JSON.stringify(restaurant));
-  };
+  }
+  else{
+    localStorage.setItem("restaurantFood", JSON.stringify(restaurant));
+
+  };}
+
+    
   return (
     <div onClick={() => handleRestaurant(restaurant.name)} className="   ">
       <div className=" h-fit   ">

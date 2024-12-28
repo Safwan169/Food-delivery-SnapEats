@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex gap-10 w-1/2 items-center">
           <Logo />
           <SearchBar />
-          <Address />
+          {/* <Address /> */}
         </div>
         <div className="  flex gap-5 items-center">
           {user && (
@@ -25,14 +25,14 @@ const Navbar = () => {
               <Notification />
             </span>
           )}
-          <Language />
+          {/* <Language /> */}
+          <Cart />
           {user && (
             <span>
-              <Cart />
               <UserProfile />
             </span>
           )}
-          {!user && <span className="px-5 py-3 font-semibold bg-gray-200 rounded-2xl">Log in</span>}
+          {!user && <NavLink to={'/login'} className="px-5 py-3 cursor-pointer font-semibold bg-gray-200 rounded-2xl">Log in</NavLink>}
         </div>
       </div>
     </nav>

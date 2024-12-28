@@ -5,7 +5,7 @@ import RestaurantCardMain from "../Componants/Restaurants/RestaurantCard/Restaur
 const Home = () => {
   return (
     <div className="" >
-      <div className="  max-w-[1400px] mx-auto">
+      <div className="  max-w-[1400px] min-h-[500px] mx-auto">
         <RestaurantsBtn />
       <RestaurantCardMain />
       </div>

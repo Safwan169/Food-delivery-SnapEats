@@ -3,7 +3,7 @@ import FoodsMenu from './FoodsMenu'
 import RestaurantFoods from './RestaurantFoods'
 import CartSection from './CartSection';
 
-const RestaurantFoodSection = ({name}) => {
+const RestaurantFoodSection = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const RestaurantFoodSection = ({name}) => {
 
   return (
     <div className=' grid   px-20 mx-auto gap-0 grid-cols-5'>
-      <div className="border border-red-500 ">
+      <div className=" ">
       <FoodsMenu data={data}/>
 
       </div>
-        <div className='border w-full col-span-3 border-red-600'>
+        <div className=' w-full mb-5 col-span-3 '>
           {/* this is for food content */}
         <RestaurantFoods data={data}/>
         </div>

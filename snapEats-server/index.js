@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000
 const cors = require('cors')
 require('dotenv').config()
 
-app.use(cors(['http://localhost:5173']))
+app.use(cors(['http://localhost:5173','https://food-delivery-snap-eats.vercel.app']))
 
 
 
@@ -54,13 +54,55 @@ async function run() {
          result = await restaurantDataEng.find({
         name: { $regex: text, $options: 'i' }
       }).toArray();      }
-        console.log(result,'this is a successful')
+        // console.log(result,'this is a successful')
         res.json(result)
         
     })
 
+    app.get('/search',async(req,res) => {
 
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+
+      const text=req.query.value
+      if (text=='all') {
+     const food = await restaurantDataEng.find().toArray()
+
+
+     console.log(food,'this is for searhing')
+     res.json(food)
+        
+      }
+      else{
+
+        const query = {
+          $or: [
+            { name: { $regex: text, $options: "i" } },
+            { "foods.category": { $regex: text, $options: "i" } }
+          ]
+        };
+        
+        const projection = {
+          name: 1,
+          image: 1,
+          rating: 1,
+          deliveryTime: 1,
+          type: 1,
+          address: 1,
+          minimumAmountForFreeDelivery: 1,
+          isFreeDelivery: 1,
+          foods: {
+            $elemMatch: { category: { $regex: text, $options: "i" } } // Filter foods array
+          }
+        };
+
+        const food = await restaurantDataEng.find(query, { projection }).toArray()
+
+        res.json(food)
+      }
+
+
+    })
+
+
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
