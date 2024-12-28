@@ -2,8 +2,12 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
 
-// const cors = require('cors')
+const cors = require('cors')
 require('dotenv').config()
+
+app.use(cors(['http://localhost:5173']))
+
+
 
 
 
@@ -29,10 +33,27 @@ async function run() {
     // await client.connect();
     // Send a ping to confirm a successful connection
 
-    app.get('/restaurant/all',async(req,res) => {
+    app.get('/restaurant',async(req,res) => {
 
-        const result= await restaurantDataEng.find().toArray()
 
+      const text=req.query.value
+      console.log(text,'thsi is for query')
+
+    let result
+
+      if (text.toLowerCase()=='all') {
+        
+      
+
+    
+        result= await restaurantDataEng.find().toArray()
+      }
+
+      else{
+
+         result = await restaurantDataEng.find({
+        name: { $regex: text, $options: 'i' }
+      }).toArray();      }
         console.log(result,'this is a successful')
         res.json(result)
         

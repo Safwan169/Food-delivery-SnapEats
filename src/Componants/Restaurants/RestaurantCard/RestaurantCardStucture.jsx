@@ -8,16 +8,29 @@ import {
 import { useNavigate } from "react-router";
 
 const RestaurantCardStucture = ({ restaurant }) => {
-    const navigate= useNavigate()
-const handleRestaurant=(name) => {
+  const navigate = useNavigate();
+  const handleRestaurant = (name) => {
     console.log("You clicked on restaurant: ", name),
-    navigate(`/restaurants/${name}`)
-  
-}
+      navigate(`/restaurants/${name}`);
+
+    const available = localStorage.getItem("restaurantFood");
+
+    console.log(available, "is available");
+
+    if (available) {
+      localStorage.removeItem("restaurantFood");
+    }
+
+    localStorage.setItem("restaurantFood", JSON.stringify(restaurant));
+  };
   return (
-    <div onClick={()=>handleRestaurant(restaurant.name)} className="   ">
+    <div onClick={() => handleRestaurant(restaurant.name)} className="   ">
       <div className=" h-fit   ">
-        <img className="rounded-3xl bg-cover h-[150px] w-full " src={restaurant.image} alt="" />
+        <img
+          className="rounded-3xl bg-cover h-[150px] w-full "
+          src={restaurant.image}
+          alt=""
+        />
       </div>
       <div className="px-3 mt-2 ">
         <div className="flex  justify-between">
@@ -31,9 +44,19 @@ const handleRestaurant=(name) => {
           <FaCarAlt size={15} />
           <span>{restaurant?.deliveryTime}</span>
         </p>
-      <p className="mt-1">
-      {restaurant.isFreeDelivery?<span className="bg-green-100 rounded-3xl text-xs px-2 py-1 text-green-600">Free delivery</span>:restaurant.isFreeMeal&&<span className="bg-green-100 rounded-3xl text-xs px-2 py-1 text-green-600 ">Meal as a gift </span>}
-      </p>
+        <p className="mt-1">
+          {restaurant.isFreeDelivery ? (
+            <span className="bg-green-100 rounded-3xl text-xs px-2 py-1 text-green-600">
+              Free delivery
+            </span>
+          ) : (
+            restaurant.isFreeMeal && (
+              <span className="bg-green-100 rounded-3xl text-xs px-2 py-1 text-green-600 ">
+                Meal as a gift{" "}
+              </span>
+            )
+          )}
+        </p>
       </div>
     </div>
   );

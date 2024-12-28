@@ -6,7 +6,7 @@ const RestaurantsBtn = () => {
     const buttonText=[
         {text:'All'},
         {text:'Pizza'},
-        {text:'Burgers'},
+        {text:'Burger'},
         {text:'Sushi'},
         {text:'Pasta'},
       
