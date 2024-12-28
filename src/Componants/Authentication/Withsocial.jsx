@@ -1,12 +1,11 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth/web-extension';
-import { getAuth, signInWithPopup } from 'firebase/auth';
 // import { auth } from '../../firebase.config';
 
 
@@ -67,8 +66,8 @@ const Withsocial = ({ text }) => {
         <div className='max-w-md mx-auto'>
             <p className=' text-xl my-5'>{text}</p>
             <div className='flex gap-10'>
-                <button onClick={handleGoogle} className='border font-bold flex items-center p-3 gap-2 bg-gray-300 px-4 rounded-xl btn '><FcGoogle /> Google</button>
-                <button onClick={handleGitHub} className='border font-bold flex items-center p-3 gap-2  bg-gray-300 px-4 rounded-xl btn '><FaGithub /> GitHub</button>
+                <button onClick={handleGoogle} className='border font-bold flex items-center p-3 gao-2 bg-gray-300 px-4 rounded-xl btn '><FcGoogle /> Google</button>
+                <button onClick={handleGitHub} className='border font-bold flex items-center p-3 gao-2  bg-gray-300 px-4 rounded-xl btn '><FaGithub /> GitHub</button>
             </div>
 
 
